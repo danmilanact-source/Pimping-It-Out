@@ -5,10 +5,31 @@
 [sub_resource type="BoxMesh" id="BoxMesh_7u77a"]
 size = Vector3(125, 1, 125)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjgbg"]
+albedo_color = Color(0.33333334, 1, 0.53333336, 1)
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_bo1nx"]
+
+[sub_resource type="Sky" id="Sky_8gbba"]
+sky_material = SubResource("PhysicalSkyMaterial_bo1nx")
+
+[sub_resource type="Environment" id="Environment_jjvhh"]
+background_mode = 2
+sky = SubResource("Sky_8gbba")
+ambient_light_color = Color(0.9166399, 0.91663986, 0.9166398, 1)
+
 [node name="Main" type="Node3D" unique_id=1714676853]
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=491914387]
 mesh = SubResource("BoxMesh_7u77a")
+surface_material_override/0 = SubResource("StandardMaterial3D_jjgbg")
 
 [node name="Player" parent="." unique_id=1063241546 instance=ExtResource("1_jjgbg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.40361, 3.5177054, 36.94919)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1098659579]
+environment = SubResource("Environment_jjvhh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1949183626]
+transform = Transform3D(0.99976885, -0.017141448, -0.0048475573, 0.038748253, 0.44204772, 0.8967338, 0, -0.89682776, 0.44237983, 0, 40.73918, 0)
+shadow_enabled = true

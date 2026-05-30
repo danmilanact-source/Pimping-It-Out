@@ -17,3 +17,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tugb3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D" unique_id=1405969375]
 shape = SubResource("CapsuleShape3D_uvnfx")
+
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D" unique_id=25501295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9669161, 0)
