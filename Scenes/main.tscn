@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://digacxc7n1yw5"]
 
+[ext_resource type="PackedScene" uid="uid://1wb4sueavpjc" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7u77a"]
+size = Vector3(125, 1, 125)
+
 [node name="Main" type="Node3D" unique_id=1714676853]
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=491914387]
+mesh = SubResource("BoxMesh_7u77a")
+
+[node name="Player" parent="." unique_id=1063241546 instance=ExtResource("1_jjgbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.40361, 3.5177054, 36.94919)
