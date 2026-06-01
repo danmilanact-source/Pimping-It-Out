@@ -4,6 +4,9 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a3d8c"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uvnfx"]
+height = 2.5
+
 [node name="Player" type="Node3D" unique_id=1063241546]
 
 [node name="player" type="CharacterBody3D" parent="." unique_id=1661338297]
@@ -18,4 +21,11 @@ shape = SubResource("CapsuleShape3D_a3d8c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7466018, -0.36682415)
 
 [node name="Camera3D" type="Camera3D" parent="player/Head" unique_id=1349078632]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5588763, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5588763, 0.24184263)
+
+[node name="CrouchDetection" type="ShapeCast3D" parent="player" unique_id=1967296405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2888702, 0)
+shape = SubResource("CapsuleShape3D_uvnfx")
+target_position = Vector3(0, 0.1, 0)
+collision_mask = 4
+debug_shape_custom_color = Color(1, 0, 0, 1)

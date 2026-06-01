@@ -6,7 +6,7 @@ load_path = "res://.godot/imported/cross_crosshair.png-861999f52193fa78da21abb16
 [node name="Crosshair" type="CanvasLayer" unique_id=1543011760]
 follow_viewport_scale = 880.629
 
-[node name="idle" type="TextureRect" parent="." unique_id=1641855428]
+[node name="Cursor" type="TextureRect" parent="." unique_id=1641855428]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

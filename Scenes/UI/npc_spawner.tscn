@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://xpevxifmct5l"]
+
+[node name="NPCSpawner" type="CanvasLayer" unique_id=502285248]
+
+[node name="spawn_button" type="Button" parent="." unique_id=248429118]
+offset_left = 500.0
+offset_top = 500.0
+offset_right = 596.0
+offset_bottom = 531.0
+text = "Spawn NPC"
