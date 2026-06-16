@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://1wb4sueavpjc" path="res://Scenes/Player/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://lyl2dvkspxxe" path="res://Scenes/UI/crosshair.tscn" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://dp3fst30b22r0" path="res://Assets/Scripts/lightcontrol.gd" id="2_kry3j"]
 [ext_resource type="Script" uid="uid://sj86k5i8kff6" path="res://Assets/Scripts/crosshair_script.gd" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://xpevxifmct5l" path="res://Scenes/UI/npc_spawner.tscn" id="4_jjvhh"]
 
@@ -32,6 +33,7 @@ environment = SubResource("Environment_jjvhh")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1949183626]
 transform = Transform3D(0.99976885, -0.017141448, -0.0048475573, 0.038748253, 0.44204772, 0.8967338, 0, -0.89682776, 0.44237983, 0, 40.73918, 0)
 shadow_enabled = true
+script = ExtResource("2_kry3j")
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=2101647119]
 
